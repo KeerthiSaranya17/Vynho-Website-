@@ -5,6 +5,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Services from "../pages/Services";
 import Products from "../pages/Products";
+import Ai from "../pages/Ai";
 
 const AppRoutes =()=>{
     return (
@@ -14,6 +15,7 @@ const AppRoutes =()=>{
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/services" element={<Services/>}/>
             <Route path="/products" element={<Products/>}/>
+            <Route path="/ai" element={<Ai/>}/>
         </Routes>
     );
 }

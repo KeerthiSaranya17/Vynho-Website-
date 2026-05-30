@@ -1,5 +1,4 @@
-
-import './App.css'
+import './styles/global.css'
 import Navbar from './components/layout/Navbar'
 import AppRoutes from './routes/AppRoutes'
 
@@ -9,9 +8,10 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center bg-black">
+      <div >
       <Navbar/>
       <AppRoutes/>
+      {/* <Home/> */}
     </div>
     </>
   )
