@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Button from "../ui/button";
 
 const Navbar = () => {
   return (
@@ -71,16 +72,7 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <div>
-            <button>
-              {" "}
-              <NavLink
-                to="/contact"
-                className="rounded-full px-6 py-3 bg-primary-600 text-slate-300 font-medium transition-all duration-300 hover:bg-primary-500
-    hover:scale-105 hover:shadow-lg hover:shadow-primary-500/30 text-base"
-              >
-                Get in touch
-              </NavLink>{" "}
-            </button>
+            <Button to="/contact" variant="primary">contact</Button>
           </div>
         </div>
       </nav>

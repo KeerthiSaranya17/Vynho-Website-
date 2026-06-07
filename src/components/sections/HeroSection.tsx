@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
+import Button from "../../components/ui/button";
 
-const Home = () => {
+const HeroSection = () => {
   return (
     <section className="w-full relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-23">
+      <div className="max-w-7xl mx-auto px-6 py-30 sm:py-32">
         <div className="grid lg:grid-cols-2 items-center gap-6">
           {/* left content */}
 
@@ -25,12 +25,12 @@ const Home = () => {
             {/* main content */}
 
             <div className="grid gap-6">
-              <h1 className="text-text-primary font-heading text-5xl leading-tight">
+              <h1 className="text-text-primary font-bold font-heading text-5xl leading-tight">
                 Building Intelligent Solutions for a Smarter Tomorrow
               </h1>
               {/* sub content */}
 
-              <p className="text-text-secondary font-body text-base leading-tight">
+              <p className="text-text-muted font-body text-base leading-tight">
                 We combine AI, software engineering, and modern design to create
                 powerful digital experiences that drive business growth.
               </p>
@@ -38,19 +38,8 @@ const Home = () => {
             {/* CTA buttons */}
 
             <div className="flex items-center gap-4">
-              <button
-                className="rounded-full px-6 py-3 bg-primary-600 text-slate-300 font-medium transition-all duration-300 hover:bg-primary-500
-    hover:scale-105 hover:shadow-lg hover:shadow-primary-500/30 text-base"
-              >
-                <NavLink to="/contact">Get Started</NavLink>
-              </button>
-
-              <button
-                className="rounded-full border border-white/10 bg-white/5 px-6  py-3  text-slate-300  font-medium  
-                backdrop-blur-md  transition-all  duration-300  hover:border-white/30  hover:bg-white/10  hover:text-white "
-              >
-                Products
-              </button>
+              <Button to="/contact" variant="primary"> Get started </Button>
+              <Button to="/products" variant="secondary">Products</Button>
             </div>
           </div>
 
@@ -59,7 +48,7 @@ const Home = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Home;
+export default HeroSection

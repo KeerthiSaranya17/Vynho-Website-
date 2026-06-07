@@ -1,10 +1,10 @@
 import { Routes,Route } from "react-router-dom";
 
-import Home from "../pages/Home";
-import Contact from "../pages/Contact";
+import Home from "../pages/HomePage";
+import Contact from "../pages/ContactPage";
 import About from "../pages/About";
-import Services from "../pages/Services";
-import Products from "../pages/Products";
+import Services from "../pages/ServicesPage";
+import Products from "../pages/ProductsPage";
 import Ai from "../pages/Ai";
 
 const AppRoutes =()=>{
