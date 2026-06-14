@@ -1,15 +1,20 @@
 import ServicesCard from "../cards/ServicesCard";
-
+import { motion } from 'framer-motion';
 
 const ServicesSection = () => {
   return (
-    <section className="w-full py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full">
+       <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:py-26 sm:py-22">
         
         <div className="text-center">
           {/* Badge */}
           <div
-              className="w-fit mb-4 mx-auto rounded-full border border-border/15 transition-all
+              className="w-fit mb-5 mx-auto rounded-full border border-border/15 transition-all
                 "
             >
               <div className="flex items-center gap-3 rounded-full bg-zinc-900 px-4 py-1">
@@ -23,11 +28,11 @@ const ServicesSection = () => {
           
           {/* Heading */}
 
-          <h2 className="text-4xl md:text-5xl font-semibold text-text-primary">
+          <h2 className="text-5xl font-semibold text-text-primary font-heading leading-tight">
             Solutions Designed for Modern Businesses
           </h2>
 
-          <p className="mt-6 max-w-2xl mx-auto text-text-muted">
+          <p className="mt-8 text-base text-text-muted leading-relaxed max-w-xl mx-auto">
             From AI-powered applications to scalable cloud systems,
             we build technology that drives innovation and growth.
           </p>
@@ -37,6 +42,7 @@ const ServicesSection = () => {
         <ServicesCard/>
         
       </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,15 +1,21 @@
+import HeroAnimation from "../../assets/animations/heroAnimation/HeroAnimation";
 import Button from "../../components/ui/button";
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
     <section className="w-full relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-30 sm:py-32">
-        <div className="grid lg:grid-cols-2 items-center gap-6">
+      <div className="max-w-7xl mx-auto px-6 lg:py-26 sm:py-22">
+        <div className="grid lg:grid-cols-2 items-start gap-6">
           {/* left content */}
-
+ <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
           <div className="flex flex-col gap-13">
             {/* Badge */}
-
+           
             <div
               className="w-fit rounded-full bg-linear-to-r from-cyan-400 via-violet-500 to-orange-500 p-px transition-all
                  duration-300 hover:shadow-[0_0_30px_rgba(79,70,229,0.45)]"
@@ -22,6 +28,7 @@ const HeroSection = () => {
                 </p>
               </div>
             </div>
+            
             {/* main content */}
 
             <div className="grid gap-6">
@@ -42,9 +49,11 @@ const HeroSection = () => {
               <Button to="/products" variant="secondary">Products</Button>
             </div>
           </div>
-
+</motion.div>
           {/* right content */}
-          <div></div>
+          <div>
+            <HeroAnimation/>
+          </div>
         </div>
       </div>
     </section>

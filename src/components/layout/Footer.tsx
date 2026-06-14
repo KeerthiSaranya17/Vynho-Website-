@@ -5,8 +5,12 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full relative overflow-hidden">
+    <footer className="w-full relative overflow-hidden ">
       <div className="max-w-7xl mx-auto px-6 py-10">
+
+        <div className="mb-10">
+          <hr className="border-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
+        </div>
 
         {/* logo & taglie */}
 

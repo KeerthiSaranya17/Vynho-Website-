@@ -2,7 +2,7 @@ import { services } from "../../data/services";
 
 const ServicesCard = () => {
   return (
-    <div className="max-w-7xl mx-auto mt-4 mb-4 px-6">
+    <div className="max-w-7xl mx-auto mt-5 px-6">
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;

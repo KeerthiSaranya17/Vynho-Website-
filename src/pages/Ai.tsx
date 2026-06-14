@@ -1,7 +1,16 @@
+import Footer from "../components/layout/Footer"
+import { HeroSection } from "../components/sections/aiSection/AiHeroSection"
+import { AudienceSection } from "../components/sections/aiSection/AudienceSection"
+import { SpotlightSection } from "../components/sections/aiSection/SpotlightSection"
 
 const Ai = () => {
   return (
-    <div className="text-5xl font-bold text-white">Ai</div>
+    <div>
+      <HeroSection/>
+      <AudienceSection/>
+      <SpotlightSection/>
+      <Footer/>
+    </div>
   )
 }
 
