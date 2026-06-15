@@ -8,6 +8,7 @@ import { CategoryFilter } from '../components/sections/productsSection/CategoryF
 import { FeaturedProduct } from '../components/sections/productsSection/FeaturedProduct';
 import { ProductGrid } from '../components/sections/productsSection/ProductGrid';
 import Footer from '../components/layout/Footer';
+import { Helmet } from 'react-helmet-async';
 
 interface ProductsPageProps {
   onProductClick?: (productId: string) => void;
@@ -40,6 +41,15 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onProductClick }) => {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>Products Vynho</title>
+        <meta
+          name="description"
+          content="The products vynho created so far."
+        />
+      </Helmet>
+    
     <div>
       {/* Subtle grid background */}
       <div
@@ -108,6 +118,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onProductClick }) => {
       </div>
       <Footer/>
     </div>
+    </>
   );
 };
 
