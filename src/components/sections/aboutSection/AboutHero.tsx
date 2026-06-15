@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 
 const AboutHero = () => {
   return (
-    <section className="w-full">
+    <motion.section initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }} className="w-full">
       <div className="max-w-7xl  mx-auto px-6 lg:py-26 sm:py-22 bg-[radial-gradient(circle_at_78%_30%,rgba(81,70,244,0.28),transparent_32%),radial-gradient(circle_at_18%_62%,rgba(0,198,255,0.12),transparent_28%)]">
         <div className="grid lg:grid-cols-2 items-start gap-6">
           {/* Left */}
@@ -52,7 +54,7 @@ const AboutHero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

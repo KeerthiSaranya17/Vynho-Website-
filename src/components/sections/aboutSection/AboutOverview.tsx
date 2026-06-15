@@ -44,7 +44,9 @@ const cards = [
 
 export default function Overview() {
   return (
-    <section id="story" className="relative">
+    <motion.section initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }} id="story" className="relative">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: heading */}
@@ -133,6 +135,6 @@ export default function Overview() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

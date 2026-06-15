@@ -5,7 +5,7 @@ import { SectionReveal } from "./SectionReveal";
 
 export function AudienceSection() {
   return (
-    <SectionReveal className="relative border-y border-white/10 bg-white/2.5 py-10 max-w-7xl mx-auto px-6">
+    <SectionReveal className="relative border-y border-white/10 bg-white/2.5 py-26 max-w-7xl mx-auto px-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(34,211,238,0.12),transparent_30%),radial-gradient(circle_at_88%_80%,rgba(168,85,247,0.12),transparent_32%)]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div>

@@ -4,7 +4,9 @@ const steps = ["Discover", "Design", "Build", "Launch", "Scale"];
 
 export default function ProcessFlow() {
   return (
-    <section id="approach" className="  px-6 py-26">
+    <motion.section initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }} id="approach" className="  px-6 py-26">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-[40%_60%] items-end gap-10">
           <motion.div
@@ -68,6 +70,6 @@ export default function ProcessFlow() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

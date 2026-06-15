@@ -21,7 +21,9 @@ const pillars = [
 
 export default function Culture() {
   return (
-    <section className="relative py-28">
+    <motion.section initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }} className="relative py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Right: visual / pillars */}
@@ -116,6 +118,6 @@ export default function Culture() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

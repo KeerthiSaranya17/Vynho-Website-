@@ -1,6 +1,7 @@
 
 import { toast } from "sonner";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
     const projectTypes = [
@@ -105,7 +106,10 @@ const ContactForm = () => {
     }
   };
   return (
-    <>
+    <motion.div initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}>
     <div className="rounded-3xl border border-white/10 bg-white/0.03 p-6 backdrop-blur-xl shadow-[0_0_30px_rgba(255,255,255,0.10)] hover:border-primary-500/30">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -185,7 +189,7 @@ const ContactForm = () => {
                 </form>
                 <div className="absolute right-0 top-1/2 -z-10 h-125 w-125 -translate-y-1/2 rounded-full bg-primary-500/10 blur-[140px]" />
               </div>
-    </>
+    </motion.div>
   )
 }
 

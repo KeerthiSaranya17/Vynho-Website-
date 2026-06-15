@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Button from "../ui/button";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <header className="sticky w-full top-2 z-50 ">
-      <nav className="max-w-7xl mx-auto px-6 py-2 text-text-secondary font-body bg-white/0.03 backdrop-blur-xl rounded-2xl border border-white/15">
+      <motion.nav  initial={{ y: -30, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.5 }} className="max-w-7xl mx-auto px-6 py-2 text-text-secondary font-body bg-white/0.03 backdrop-blur-xl rounded-2xl border border-white/15">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div>
@@ -75,7 +78,7 @@ const Navbar = () => {
             <Button to="/contact" variant="primary">contact</Button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };
