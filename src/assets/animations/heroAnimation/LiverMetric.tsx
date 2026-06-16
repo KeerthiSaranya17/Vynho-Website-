@@ -23,11 +23,14 @@ interface LiveMetricsProps {
 
 export const LiveMetrics: React.FC<LiveMetricsProps> = ({ className = '' }) => {
   const prefersReduced = useReducedMotion();
+  console.log("prefersReduced =", prefersReduced);
   const [counts, setCounts] = useState<number[]>(
   prefersReduced ? METRICS.map((m) => m.target) : [0, 0, 0]
 );
 
   useEffect(() => {
+
+    if (prefersReduced) return;
     
 
     const start = performance.now();
